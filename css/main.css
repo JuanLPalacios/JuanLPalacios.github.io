@@ -53,6 +53,15 @@ button.disabled {
   flex-basis: 100%;
 }
 
+ul.cell {
+  padding: 0;
+  list-style: none;
+}
+
+ul.cell > li {
+  display: inline-block;
+}
+
 .nav-bar {
   min-height: 46px;
   flex-wrap: nowrap;
