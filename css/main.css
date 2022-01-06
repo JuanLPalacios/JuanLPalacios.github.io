@@ -70,6 +70,7 @@ button.disabled {
   line-height: 46px;
   color: #fff;
   padding: 0 12px;
+  display: inline-block;
 }
 
 #menu-btn {
