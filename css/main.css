@@ -239,7 +239,7 @@ ul.cell > li {
 
 .card.work:nth-child(1) .content {
   background: none;
-  padding: 0 16px 22px;
+  padding: 0 0 22px;
   color: initial;
 }
 
