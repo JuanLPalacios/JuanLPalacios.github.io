@@ -33,6 +33,15 @@ h2 {
   margin-block: 12px;
 }
 
+p {
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  margin-block: 12px;
+}
+
 button {
   font-family: Inter, sans-serif;
   font-style: normal;
@@ -153,13 +162,7 @@ ul.cell > li {
 }
 
 .blk-sec p {
-  font-family: Poppins, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
   color: #fff;
-  margin-block: 12px;
 }
 
 .social-link {
@@ -169,6 +172,10 @@ ul.cell > li {
 
 .works {
   padding-top: 120px;
+}
+
+.works h1 {
+  text-align: center;
 }
 
 .grid.works-list {
@@ -244,14 +251,86 @@ ul.cell > li {
   height: auto;
 }
 
+.about ul {
+  padding: 0;
+  list-style-position: inside;
+  margin-block: 12px;
+}
+
+.about > ul {
+  list-style: none;
+}
+
 .work:nth-child(1) ul {
   list-style: none;
   padding: 0;
   margin: 12px -6px;
 }
 
+.about li li {
+  list-style: none;
+  text-align: center;
+  font-family: inter, sans-serif;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 43px;
+  margin-block: 32px;
+}
+
+.about > ul > li {
+  text-align: center;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+}
+
 .work:nth-child(1) ul li {
   border: 1px solid #8993a4;
   background: initial;
   color: #091e42;
+}
+
+.about {
+  background-color: #1c1a19;
+  color: #fff;
+}
+
+.about h1 {
+  font-size: 72px;
+  line-height: 88px;
+  letter-spacing: 0.37px;
+  color: #ff6b00;
+  text-align: center;
+}
+
+.about .bg-ilust {
+  padding: 86px 24px 200px;
+  margin: 0 -24px;
+  background-image: url(../imgs/Frame.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.about > hr {
+  margin-block: 9px 130px;
+}
+
+.about > ul > li::before {
+  content: ' ';
+  display: inline-block;
+  background: #ff6b00;
+  width: 16px;
+  height: 16px;
+  margin: 0 12px;
+  transform: translate(0, -2px);
+}
+
+.about > ul > li:nth-child(1)::before {
+  transform: translate(0, -2px) rotate(45deg);
+}
+
+.about > ul > li:nth-child(3)::before {
+  border-radius: 100px;
 }
