@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background: #f55800;
+  padding: 12px;
+  border: 1px solid #f55800;
+}
+
+button:hover,
+button.hover {
+  background: #fff5e1;
+  color: #f55800;
+}
+
+button:active,
+button.pressed {
+  background: #e05304;
+  border-color: #e05304;
+  color: #f4f1f0;
+}
+
+button[disabled],
+button.disabled {
+  background: #f4f1f0;
+  border-color: #f4f1f0;
+  color: #5b5957;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.cell {
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+
+ul.cell {
+  padding: 0;
+  list-style: none;
+}
+
+ul.cell > li {
+  display: inline-block;
+}
+
+.nav-bar {
+  min-height: 46px;
+  flex-wrap: nowrap;
+  background: #3c3a39;
+  position: fixed;
+  width: 100vw;
+  padding: 0 24px;
+}
+
+.title {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 46px;
+  color: #fff;
+  padding: 0 12px;
+  text-decoration: none;
+}
+
+#menu-btn {
+  min-height: 46px;
+  max-width: 46px;
+  padding: 9px;
+}
+
+.blk-sec {
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(../imgs/Illustration.svg);
+  background-color: #1c1a19;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-attachment: scroll;
+  background-size: auto;
+  padding: 24px;
+}
+
+.blk-sec h1 {
+  font-family: Crete Round, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: 0.37px;
+  color: #ff6b00;
+  margin-block: 12px;
+}
+
+.blk-sec .p-sub {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  color: #fff5e1;
+  margin-block: 12px;
+}
+
+.blk-sec p {
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  margin-block: 12px;
+}
+
+.social-link {
+  display: inline-block;
+  padding: 12px;
+}
