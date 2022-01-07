@@ -79,17 +79,13 @@ ul.cell > li {
   line-height: 46px;
   color: #fff;
   padding: 0 12px;
-  display: inline-block;
+  text-decoration: none;
 }
 
 #menu-btn {
   min-height: 46px;
   max-width: 46px;
   padding: 9px;
-}
-
-#i72h {
-  color: black;
 }
 
 .blk-sec {
