@@ -309,7 +309,6 @@ ul.cell > li {
   display: flex;
   flex-direction: column;
   margin-top: 58px;
-  
 }
 
 .contact form input {
@@ -349,13 +348,13 @@ ul.cell > li {
 }
 
 .footer-list::after {
-content: " ";
-background-color: #0d151e;
-width: 134px;
-height: 5px;
-position: absolute;
-bottom: 8px;
-margin-bottom: -26px;
+  content: " ";
+  background-color: #0d151e;
+  width: 134px;
+  height: 5px;
+  position: absolute;
+  bottom: 8px;
+  margin-bottom: -26px;
 }
 
 .about {
