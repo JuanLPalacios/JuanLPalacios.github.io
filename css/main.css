@@ -6,6 +6,42 @@ body {
   margin: 0;
 }
 
+section {
+  padding: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Crete Round, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 52px;
+  margin-block: 24px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 44px;
+  margin-block: 12px;
+}
+
+p {
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  margin-block: 12px;
+}
+
 button {
   font-family: Inter, sans-serif;
   font-style: normal;
@@ -62,6 +98,10 @@ ul.cell > li {
   display: inline-block;
 }
 
+.grid {
+  display: grid;
+}
+
 .nav-bar {
   min-height: 46px;
   flex-wrap: nowrap;
@@ -69,6 +109,7 @@ ul.cell > li {
   position: fixed;
   width: 100vw;
   padding: 0 24px;
+  z-index: 10;
 }
 
 .title {
@@ -98,13 +139,9 @@ ul.cell > li {
   background-position: right bottom;
   background-attachment: scroll;
   background-size: auto;
-  padding: 24px;
 }
 
 .blk-sec h1 {
-  font-family: Crete Round, sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 56px;
   line-height: 64px;
   letter-spacing: 0.37px;
@@ -125,16 +162,175 @@ ul.cell > li {
 }
 
 .blk-sec p {
-  font-family: Poppins, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
   color: #fff;
-  margin-block: 12px;
 }
 
 .social-link {
   display: inline-block;
   padding: 12px;
+}
+
+.works {
+  padding-top: 120px;
+}
+
+.works h1 {
+  text-align: center;
+}
+
+.grid.works-list {
+  margin: 80px 0 20px;
+  grid-gap: 24px;
+}
+
+.card.work {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+}
+
+.card.work .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.card.work .content {
+  background-image: linear-gradient(0deg, black, transparent);
+  padding: 72px 16px 22px;
+  color: #fff;
+}
+
+.work .background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px -6px;
+}
+
+.work ul li {
+  display: inline-block;
+  padding: 10px 12px;
+  margin: 0 6px;
+  border: 1px solid #8993a4;
+  border: 1px solid transparent;
+  background: rgb(255 255 255 / 24%);
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #091e42;
+  color: #fff;
+}
+
+.card.work:nth-child(1) .background {
+  position: initial;
+  width: auto;
+  height: auto;
+}
+
+.card.work:nth-child(1) .content {
+  background: none;
+  padding: 0 0 22px;
+  color: initial;
+}
+
+.card.work:nth-child(1) .live {
+  align-self: flex-start;
+}
+
+.work:nth-child(1) .background img {
+  height: auto;
+}
+
+.about ul {
+  padding: 0;
+  list-style-position: inside;
+  margin-block: 12px;
+}
+
+.about > ul {
+  list-style: none;
+}
+
+.work:nth-child(1) ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px -6px;
+}
+
+.about li li {
+  list-style: none;
+  text-align: center;
+  font-family: inter, sans-serif;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 43px;
+  margin-block: 32px;
+}
+
+.about > ul > li {
+  text-align: center;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.work:nth-child(1) ul li {
+  border: 1px solid #8993a4;
+  background: initial;
+  color: #091e42;
+}
+
+.about {
+  background-color: #1c1a19;
+  color: #fff;
+}
+
+.about h1 {
+  font-size: 72px;
+  line-height: 88px;
+  letter-spacing: 0.37px;
+  color: #ff6b00;
+  text-align: center;
+}
+
+.about .bg-ilust {
+  padding: 86px 24px 200px;
+  margin: 0 -24px;
+  background-image: url(../imgs/Frame.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.about > hr {
+  margin-block: 9px 130px;
+}
+
+.about > ul > li::before {
+  content: ' ';
+  display: inline-block;
+  background: #ff6b00;
+  width: 16px;
+  height: 16px;
+  margin: 0 12px;
+  transform: translate(0, -2px);
+}
+
+.about > ul > li:nth-child(1)::before {
+  transform: translate(0, -2px) rotate(45deg);
+}
+
+.about > ul > li:nth-child(3)::before {
+  border-radius: 100px;
 }
