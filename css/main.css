@@ -340,6 +340,24 @@ ul.cell > li {
   margin-block: 124px 15px;
 }
 
+.footer-list {
+  position: relative;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  margin-bottom: 26px;
+}
+
+.footer-list::after {
+content: " ";
+background-color: #0d151e;
+width: 134px;
+height: 5px;
+position: absolute;
+bottom: 8px;
+margin-bottom: -26px;
+}
+
 .about {
   background-color: #1c1a19;
   color: #fff;
