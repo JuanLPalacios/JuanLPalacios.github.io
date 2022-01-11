@@ -309,6 +309,7 @@ ul.cell > li {
   display: flex;
   flex-direction: column;
   margin-top: 58px;
+  
 }
 
 .contact form input {
@@ -327,7 +328,16 @@ ul.cell > li {
   height: 114px;
   padding: 15px 16px;
   border: none;
-  background: #e5e5e5;
+  background: #fbf8f7;
+}
+
+.contact form button {
+  align-self: center;
+  margin-top: 24px;
+}
+
+.footer-separator {
+  margin-block: 124px 15px;
 }
 
 .about {
