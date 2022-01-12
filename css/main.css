@@ -400,3 +400,7 @@ ul.cell > li {
 .about > ul > li:nth-child(3)::before {
   border-radius: 100px;
 }
+
+#menu-btn ul {
+  display: none;
+}
