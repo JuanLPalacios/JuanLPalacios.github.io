@@ -404,3 +404,49 @@ ul.cell > li {
 #menu-btn ul {
   display: none;
 }
+
+@media screen and (min-width: 992px) {
+  #menu-btn {
+    max-width: 50%;
+    padding: 0;
+  }
+
+  #menu-btn > img {
+    display: none;
+  }
+
+  #menu-btn > ul {
+    display: block;
+    padding: 0;
+    margin: 0 -16px;
+    list-style: none;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    text-align: right;
+  }
+
+  #menu-btn > ul li {
+    display: inline-block;
+    margin: 0 16px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  #menu-btn > ul img {
+    margin-bottom: -7px;
+  }
+
+  .nav-bar {
+    background: #3e3c3c;
+    min-height: 72px;
+    padding: 16px 10%;
+    line-height: 40px;
+  }
+
+  .title {
+    padding-top: 16px;
+  }
+}
