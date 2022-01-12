@@ -6,7 +6,8 @@ body {
   margin: 0;
 }
 
-section {
+section,
+.section {
   padding: 24px;
 }
 
@@ -290,6 +291,71 @@ ul.cell > li {
   border: 1px solid #8993a4;
   background: initial;
   color: #091e42;
+}
+
+.contact {
+  padding-top: 120px;
+}
+
+.contact h2 {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 58px;
+}
+
+.contact form input {
+  height: 48px;
+  padding: 15px 16px;
+  border: none;
+  border-bottom: solid 1px #dbd8d7;
+  margin-bottom: 36px;
+}
+
+.contact form input::placeholder {
+  color: #979493;
+}
+
+.contact form textarea {
+  height: 114px;
+  padding: 15px 16px;
+  border: none;
+  background: #fbf8f7;
+}
+
+.contact form button {
+  align-self: center;
+  margin-top: 24px;
+}
+
+.footer-separator {
+  margin-block: 124px 15px;
+}
+
+.footer-list {
+  position: relative;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  margin-bottom: 26px;
+}
+
+.footer-list::after {
+  content: " ";
+  background-color: #0d151e;
+  width: 134px;
+  height: 5px;
+  position: absolute;
+  bottom: 8px;
+  margin-bottom: -26px;
 }
 
 .about {
