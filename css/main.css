@@ -6,7 +6,8 @@ body {
   margin: 0;
 }
 
-section {
+section,
+.section {
   padding: 24px;
 }
 

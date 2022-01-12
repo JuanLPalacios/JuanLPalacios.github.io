@@ -25,6 +25,13 @@ portafolio includin previous proyects personal and profecional.
 - Twitter: [@JuanLuisPalac20](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/juan-luis-palacios-p%C3%A9rez-95b39a228/)
 
+
+👤 **Lucas Bonnefon**
+
+- GitHub: [@JuanLPalacios](https://github.com/ryxtor)
+- Twitter: [@JuanLuisPalac20](https://twitter.com/Ryxtor)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/lucas-bonnefon-074a01134/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
