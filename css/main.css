@@ -410,6 +410,10 @@ ul.cell > li {
 }
 
 @media screen and (min-width: 992px) {
+  .works {
+    padding-top: 111px;
+  }
+
   .blk-sec ul.cell {
     position: absolute;
     left: 1.5%;
@@ -420,6 +424,60 @@ ul.cell > li {
 
   .blk-sec ul.cell > li {
     display: block;
+  }
+
+  .card.work button {
+    display: none;
+    margin-top: -50px;
+    z-index: 10;
+  }
+
+  .card.work:nth-child(1) button {
+    margin-top: 0;
+    display: initial;
+  }
+
+  .card.work:hover button {
+    display: initial;
+  }
+
+  .card.work .content {
+    padding-top: 178px;
+  }
+
+  .card.work:hover .content {
+    opacity: 0;
+  }
+
+  .card.work:nth-child(1):hover .content {
+    opacity: 1;
+  }
+
+  .card.work:nth-child(1) .background {
+    width: 60%;
+    float: left;
+    margin-right: 24px;
+  }
+
+  .grid.works-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 90px 0 106px;
+  }
+
+  .card.work:nth-child(1) {
+    grid-column: span 3;
+    display: block;
+  }
+
+  .works hr {
+    display: inline-block;
+    width: 782px;
+    width: calc(100% - 22.3rem);
+  }
+
+  .works h1 {
+    display: inline-block;
+    width: 22rem;
   }
 
   .fl-box {
