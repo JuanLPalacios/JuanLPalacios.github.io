@@ -213,13 +213,13 @@ ul.cell > li {
 .work ul {
   list-style: none;
   padding: 0;
-  margin: 12px -6px;
+  margin: 6px -6px;
 }
 
 .work ul li {
   display: inline-block;
   padding: 10px 12px;
-  margin: 0 6px;
+  margin: 6px 6px;
   border: 1px solid #8993a4;
   border: 1px solid transparent;
   background: rgb(255 255 255 / 24%);
@@ -242,6 +242,10 @@ ul.cell > li {
   background: none;
   padding: 0 0 22px;
   color: initial;
+}
+
+.card.work:nth-child(1) .content h2 {
+  margin-block-start: 0;
 }
 
 .card.work:nth-child(1) .live {
@@ -372,7 +376,7 @@ ul.cell > li {
 }
 
 .about .bg-ilust {
-  padding: 86px 24px 200px;
+  padding: 86px 23px 200px;
   margin: 0 -24px;
   background-image: url(../imgs/Frame.svg);
   background-repeat: no-repeat;
@@ -406,6 +410,34 @@ ul.cell > li {
 }
 
 @media screen and (min-width: 992px) {
+  .blk-sec ul.cell {
+    position: absolute;
+    left: 1.5%;
+    margin: 0;
+    top: 50vh;
+    transform: translateY(-50%);
+  }
+
+  .blk-sec ul.cell > li {
+    display: block;
+  }
+
+  .fl-box {
+    padding-right: 50%;
+  }
+
+  section,
+  .section {
+    padding: 24px 10%;
+  }
+
+  .blk-sec {
+    background-image: url(../imgs/Illustration-header.svg);
+    background-size: contain;
+    background-position: right center;
+    position: relative;
+  }
+
   #menu-btn {
     max-width: 50%;
     padding: 0;
