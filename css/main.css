@@ -375,6 +375,10 @@ ul.cell > li {
   text-align: center;
 }
 
+.about .bg-ilust button {
+  display: none;
+}
+
 .about .bg-ilust {
   padding: 86px 23px 200px;
   margin: 0 -24px;
@@ -491,6 +495,7 @@ ul.cell > li {
 
   .about .bg-ilust button {
     margin-top: 48px;
+    display: initial;
   }
 
   .card.work:nth-child(1) button {
@@ -610,6 +615,11 @@ ul.cell > li {
     margin: 0 16px;
     height: 40px;
     line-height: 40px;
+  }
+
+  #menu-btn a {
+    color: inherit;
+    text-decoration: inherit;
   }
 
   #menu-btn > ul img {
