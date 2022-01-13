@@ -426,6 +426,21 @@ ul.cell > li {
     display: block;
   }
 
+  .about li li {
+    text-align: left;
+  }
+
+  .about > ul {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 130px;
+  }
+
+  .about > ul > li {
+    flex-grow: 1;
+    text-align: left;
+  }
+
   .card.work button {
     display: none;
     margin-top: -50px;
@@ -484,9 +499,21 @@ ul.cell > li {
     padding-right: 50%;
   }
 
+  .about .bg-ilust {
+    margin: 0 -12.5%;
+    padding: 0 50% 130px 12.5%;
+    background-image: url(../imgs/illustration-about\ me.svg);
+    background-size: 35%;
+    background-position-y: center;
+  }
+
   section,
   .section {
     padding: 24px 10%;
+  }
+
+  .about {
+    padding-top: 130px;
   }
 
   .blk-sec {
