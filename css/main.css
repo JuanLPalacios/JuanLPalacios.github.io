@@ -410,6 +410,36 @@ ul.cell > li {
 }
 
 @media screen and (min-width: 992px) {
+  .section.contact {
+    padding-top: 118px;
+  }
+
+  hr.footer-separator {
+    margin-block-start: 154px;
+  }
+
+  .footer-list {
+    margin-bottom: 0;
+  }
+
+  .footer-list::after {
+    content: none;
+  }
+
+  .contact form button {
+    align-self: baseline;
+  }
+
+  .contact form {
+    margin-top: 9px;
+  }
+
+  .contact h2 {
+    width: 50%;
+    float: left;
+    margin-right: 24px;
+  }
+
   .works {
     padding-top: 111px;
   }
