@@ -238,6 +238,21 @@ ul.cell > li {
   height: auto;
 }
 
+.contact h2 {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 58px;
+}
+
 .card.work:nth-child(1) .content {
   background: none;
   padding: 0 0 22px;
@@ -299,21 +314,6 @@ ul.cell > li {
 
 .contact {
   padding-top: 120px;
-}
-
-.contact h2 {
-  font-family: Inter, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 44px;
-  text-align: center;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 58px;
 }
 
 .contact form input {
@@ -444,6 +444,15 @@ ul.cell > li {
     padding-top: 111px;
   }
 
+  .about li li {
+    text-align: left;
+  }
+
+  .about > ul > li {
+    flex-grow: 1;
+    text-align: left;
+  }
+
   .blk-sec ul.cell {
     position: absolute;
     left: 1.5%;
@@ -456,19 +465,10 @@ ul.cell > li {
     display: block;
   }
 
-  .about li li {
-    text-align: left;
-  }
-
   .about > ul {
     display: flex;
     flex-wrap: nowrap;
     margin-bottom: 130px;
-  }
-
-  .about > ul > li {
-    flex-grow: 1;
-    text-align: left;
   }
 
   .card.work button {
