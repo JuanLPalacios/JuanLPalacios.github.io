@@ -410,6 +410,17 @@ ul.cell > li {
 }
 
 @media screen and (min-width: 992px) {
+  p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 52px;
+    margin-block: 24px;
+  }
+
   .section.contact {
     padding-top: 118px;
   }
@@ -435,9 +446,10 @@ ul.cell > li {
   }
 
   .contact h2 {
-    width: 50%;
+    width: 40%;
     float: left;
-    margin-right: 24px;
+    margin-right: 48px;
+    text-align: left;
   }
 
   .works {
@@ -475,6 +487,10 @@ ul.cell > li {
     display: none;
     margin-top: -50px;
     z-index: 10;
+  }
+
+  .about .bg-ilust button {
+    margin-top: 48px;
   }
 
   .card.work:nth-child(1) button {
@@ -537,6 +553,10 @@ ul.cell > li {
     background-position-y: center;
   }
 
+  .about h1 {
+    text-align: left;
+  }
+
   section,
   .section {
     padding: 24px 10%;
@@ -551,6 +571,16 @@ ul.cell > li {
     background-size: contain;
     background-position: right center;
     position: relative;
+  }
+
+  .blk-sec h1 {
+    font-size: 72px;
+    line-height: 81px;
+  }
+
+  .blk-sec .p-sub {
+    font-size: 32px;
+    line-height: 44px;
   }
 
   #menu-btn {
