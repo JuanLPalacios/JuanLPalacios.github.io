@@ -213,13 +213,13 @@ ul.cell > li {
 .work ul {
   list-style: none;
   padding: 0;
-  margin: 12px -6px;
+  margin: 6px -6px;
 }
 
 .work ul li {
   display: inline-block;
   padding: 10px 12px;
-  margin: 0 6px;
+  margin: 6px 6px;
   border: 1px solid #8993a4;
   border: 1px solid transparent;
   background: rgb(255 255 255 / 24%);
@@ -238,10 +238,29 @@ ul.cell > li {
   height: auto;
 }
 
+.contact h2 {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 58px;
+}
+
 .card.work:nth-child(1) .content {
   background: none;
   padding: 0 0 22px;
   color: initial;
+}
+
+.card.work:nth-child(1) .content h2 {
+  margin-block-start: 0;
 }
 
 .card.work:nth-child(1) .live {
@@ -295,21 +314,6 @@ ul.cell > li {
 
 .contact {
   padding-top: 120px;
-}
-
-.contact h2 {
-  font-family: Inter, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 44px;
-  text-align: center;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 58px;
 }
 
 .contact form input {
@@ -371,8 +375,12 @@ ul.cell > li {
   text-align: center;
 }
 
+.about .bg-ilust button {
+  display: none;
+}
+
 .about .bg-ilust {
-  padding: 86px 24px 200px;
+  padding: 86px 23px 200px;
   margin: 0 -24px;
   background-image: url(../imgs/Frame.svg);
   background-repeat: no-repeat;
@@ -399,4 +407,233 @@ ul.cell > li {
 
 .about > ul > li:nth-child(3)::before {
   border-radius: 100px;
+}
+
+#menu-btn ul {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  p {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 52px;
+    margin-block: 24px;
+  }
+
+  .section.contact {
+    padding-top: 118px;
+  }
+
+  hr.footer-separator {
+    margin-block-start: 154px;
+  }
+
+  .footer-list {
+    margin-bottom: 0;
+  }
+
+  .footer-list::after {
+    content: none;
+  }
+
+  .contact form button {
+    align-self: baseline;
+  }
+
+  .contact form {
+    margin-top: 9px;
+  }
+
+  .contact h2 {
+    width: 40%;
+    float: left;
+    margin-right: 48px;
+    text-align: left;
+  }
+
+  .works {
+    padding-top: 111px;
+  }
+
+  .about li li {
+    text-align: left;
+  }
+
+  .about > ul > li {
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  .blk-sec ul.cell {
+    position: absolute;
+    left: 1.5%;
+    margin: 0;
+    top: 50vh;
+    transform: translateY(-50%);
+  }
+
+  .blk-sec ul.cell > li {
+    display: block;
+  }
+
+  .about > ul {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 130px;
+  }
+
+  .card.work button {
+    display: none;
+    margin-top: -50px;
+    z-index: 10;
+  }
+
+  .about .bg-ilust button {
+    margin-top: 48px;
+    display: initial;
+  }
+
+  .card.work:nth-child(1) button {
+    margin-top: 0;
+    display: initial;
+  }
+
+  .card.work:hover button {
+    display: initial;
+  }
+
+  .card.work .content {
+    padding-top: 178px;
+  }
+
+  .card.work:hover .content {
+    opacity: 0;
+  }
+
+  .card.work:nth-child(1):hover .content {
+    opacity: 1;
+  }
+
+  .card.work:nth-child(1) .background {
+    width: 60%;
+    float: left;
+    margin-right: 24px;
+  }
+
+  .grid.works-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 90px 0 106px;
+  }
+
+  .card.work:nth-child(1) {
+    grid-column: span 3;
+    display: block;
+  }
+
+  .works hr {
+    display: inline-block;
+    width: 782px;
+    width: calc(100% - 22.3rem);
+  }
+
+  .works h1 {
+    display: inline-block;
+    width: 22rem;
+  }
+
+  .fl-box {
+    padding-right: 50%;
+  }
+
+  .about .bg-ilust {
+    margin: 0 -12.5%;
+    padding: 0 50% 130px 12.5%;
+    background-image: url(../imgs/illustration-about\ me.svg);
+    background-size: 35%;
+    background-position-y: center;
+  }
+
+  .about h1 {
+    text-align: left;
+  }
+
+  section,
+  .section {
+    padding: 24px 10%;
+  }
+
+  .about {
+    padding-top: 130px;
+  }
+
+  .blk-sec {
+    background-image: url(../imgs/Illustration-header.svg);
+    background-size: contain;
+    background-position: right center;
+    position: relative;
+  }
+
+  .blk-sec h1 {
+    font-size: 72px;
+    line-height: 81px;
+  }
+
+  .blk-sec .p-sub {
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  #menu-btn {
+    max-width: 50%;
+    padding: 0;
+  }
+
+  #menu-btn > img {
+    display: none;
+  }
+
+  #menu-btn > ul {
+    display: block;
+    padding: 0;
+    margin: 0 -16px;
+    list-style: none;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    text-align: right;
+  }
+
+  #menu-btn > ul li {
+    display: inline-block;
+    margin: 0 16px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  #menu-btn a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  #menu-btn > ul img {
+    margin-bottom: -7px;
+  }
+
+  .nav-bar {
+    background: #3e3c3c;
+    min-height: 72px;
+    padding: 16px 10%;
+    line-height: 40px;
+  }
+
+  .title {
+    padding-top: 16px;
+  }
 }
