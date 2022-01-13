@@ -197,6 +197,7 @@ ul.cell > li {
   height: 100%;
   overflow: hidden;
   z-index: -1;
+  text-align: center;
 }
 
 .card.work .content {
@@ -209,6 +210,19 @@ ul.cell > li {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  margin-left: 0;
+  transition-duration: 0.5s;
+}
+
+.work:hover .background img {
+  width: 120%;
+  height: 120%;
+  margin-left: -10%;
+}
+
+.card.work:nth-child(1) .background img {
+  width: 100%;
+  margin: 0;
 }
 
 .work ul {
