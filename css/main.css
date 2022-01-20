@@ -509,7 +509,7 @@ ul.cell > li {
   .card.work button {
     display: none;
     margin-top: -50px;
-    z-index: 10;
+    z-index: 1;
   }
 
   .about .bg-ilust button {
@@ -520,6 +520,7 @@ ul.cell > li {
   .card.work:nth-child(1) button {
     margin-top: 0;
     display: initial;
+    grid-column-start: 2;
   }
 
   .card.work:hover button {
@@ -539,9 +540,9 @@ ul.cell > li {
   }
 
   .card.work:nth-child(1) .background {
-    width: 60%;
-    float: left;
-    margin-right: 24px;
+    justify-content: start;
+    justify-self: stretch;
+    grid-row: span 3;
   }
 
   .grid.works-list {
@@ -551,7 +552,11 @@ ul.cell > li {
 
   .card.work:nth-child(1) {
     grid-column: span 3;
-    display: block;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-row-gap: 0;
+    grid-column-gap: 24px;
+    justify-items: baseline;
   }
 
   .works hr {
