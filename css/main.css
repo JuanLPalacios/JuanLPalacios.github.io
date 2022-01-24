@@ -133,14 +133,22 @@ ul.cell > li {
 
 .mobile-nav-menu {
   display: flex !important;
+  background-color: #3c3a39;
   flex-direction: column;
   position: fixed;
   height: 100vh;
   width: 100vw;
   left: 0;
-  background: aliceblue;
   top: 0;
+  color: #fff5e1;
   margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-nav-menu a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .blk-sec {
@@ -472,6 +480,19 @@ ul.cell > li {
     content: none;
   }
 
+  .menu-nav a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  .menu-nav > a {
+    display: none;
+  }
+
+  #nav-menu li:nth-child(1) a {
+    display: none;
+  }
+
   .contact form button {
     align-self: baseline;
   }
@@ -636,10 +657,6 @@ ul.cell > li {
     padding: 0;
   }
 
-  .menu-nav > img {
-    display: none;
-  }
-
   .menu-nav > ul {
     display: block;
     padding: 0;
@@ -651,11 +668,6 @@ ul.cell > li {
     font-size: 15px;
     color: #fff;
     text-align: right;
-  }
-
-  .menu-nav a {
-    color: inherit;
-    text-decoration: inherit;
   }
 
   .menu-nav > ul img {
