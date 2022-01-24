@@ -125,10 +125,52 @@ ul.cell > li {
   text-decoration: none;
 }
 
-#menu-btn {
+.menu-nav {
   min-height: 46px;
   max-width: 46px;
   padding: 9px;
+}
+
+.menu-nav > ul li {
+  display: inline-block;
+  margin: 0 16px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.work ul li {
+  display: inline-block;
+  padding: 10px 12px;
+  margin: 6px 6px;
+  border: 1px solid #8993a4;
+  border: 1px solid transparent;
+  background: rgb(255 255 255 / 24%);
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #091e42;
+  color: #fff;
+}
+
+.about li li {
+  list-style: none;
+  text-align: center;
+  font-family: inter, sans-serif;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 43px;
+  margin-block: 32px;
+}
+
+.about > ul > li {
+  text-align: center;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
 }
 
 .blk-sec {
@@ -226,22 +268,6 @@ ul.cell > li {
   margin: 6px -6px;
 }
 
-.work ul li {
-  display: inline-block;
-  padding: 10px 12px;
-  margin: 6px 6px;
-  border: 1px solid #8993a4;
-  border: 1px solid transparent;
-  background: rgb(255 255 255 / 24%);
-  font-family: Inter, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
-  color: #091e42;
-  color: #fff;
-}
-
 .card.work:nth-child(1) .background {
   position: initial;
   width: auto;
@@ -293,29 +319,14 @@ ul.cell > li {
   list-style: none;
 }
 
+.menu-nav ul {
+  display: none;
+}
+
 .work:nth-child(1) ul {
   list-style: none;
   padding: 0;
   margin: 12px -6px;
-}
-
-.about li li {
-  list-style: none;
-  text-align: center;
-  font-family: inter, sans-serif;
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 43px;
-  margin-block: 32px;
-}
-
-.about > ul > li {
-  text-align: center;
-  font-family: sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 44px;
 }
 
 .work:nth-child(1) ul li {
@@ -428,8 +439,48 @@ ul.cell > li {
   border-radius: 100px;
 }
 
-#menu-btn ul {
-  display: none;
+@media screen and (max-width: 991px) {
+  .mobile-nav-menu {
+    display: flex !important;
+    background-color: #3c3a39;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    color: #fff5e1;
+    margin: 0;
+    list-style: none;
+    padding: 24px;
+    line-height: 64px;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+  }
+
+  .mobile-nav-menu > li {
+    border-bottom: 1px solid #6f6c6b;
+  }
+
+  .mobile-nav-menu > li:last-child {
+    display: none;
+  }
+
+  .mobile-nav-menu a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  .mobile-nav-menu > li > a {
+    padding-left: 16px;
+  }
+
+  .mobile-nav-menu > li:nth-child(1) > a {
+    float: right;
+    padding-right: 6px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -460,6 +511,39 @@ ul.cell > li {
     content: none;
   }
 
+  .menu-nav a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  .menu-nav > a {
+    display: none;
+  }
+
+  .about li li {
+    text-align: left;
+  }
+
+  .about > ul > li {
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  .menu-nav > ul li {
+    display: inline-block;
+    margin: 0 16px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .blk-sec ul.cell > li {
+    display: block;
+  }
+
+  #nav-menu li:nth-child(1) {
+    display: none;
+  }
+
   .contact form button {
     align-self: baseline;
   }
@@ -479,25 +563,12 @@ ul.cell > li {
     padding-top: 111px;
   }
 
-  .about li li {
-    text-align: left;
-  }
-
-  .about > ul > li {
-    flex-grow: 1;
-    text-align: left;
-  }
-
   .blk-sec ul.cell {
     position: absolute;
     left: 1.5%;
     margin: 0;
     top: 50vh;
     transform: translateY(-50%);
-  }
-
-  .blk-sec ul.cell > li {
-    display: block;
   }
 
   .about > ul {
@@ -612,16 +683,12 @@ ul.cell > li {
     line-height: 44px;
   }
 
-  #menu-btn {
+  .menu-nav {
     max-width: 50%;
     padding: 0;
   }
 
-  #menu-btn > img {
-    display: none;
-  }
-
-  #menu-btn > ul {
+  .menu-nav > ul {
     display: block;
     padding: 0;
     margin: 0 -16px;
@@ -634,19 +701,7 @@ ul.cell > li {
     text-align: right;
   }
 
-  #menu-btn > ul li {
-    display: inline-block;
-    margin: 0 16px;
-    height: 40px;
-    line-height: 40px;
-  }
-
-  #menu-btn a {
-    color: inherit;
-    text-decoration: inherit;
-  }
-
-  #menu-btn > ul img {
+  .menu-nav > ul img {
     margin-bottom: -7px;
   }
 
