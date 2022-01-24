@@ -16,7 +16,7 @@ window.addEventListener("load",()=>{
     toggleNavigationMenu();   
    });
 
-   document.querySelector("#nav-menu>li").addEventListener("click", (event) => {
+   document.querySelector("#nav-menu").addEventListener("click", (event) => {
     toggleNavigationMenu();
    });
 
