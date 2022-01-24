@@ -131,6 +131,18 @@ ul.cell > li {
   padding: 9px;
 }
 
+.mobile-nav-menu {
+  display: flex !important;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  background: aliceblue;
+  top: 0;
+  margin: 0;
+}
+
 .blk-sec {
   height: 100vh;
   justify-content: center;
