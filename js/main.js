@@ -13,7 +13,15 @@ window.addEventListener("load",()=>{
     observer.observe(document, {subtree: true, childList: true})
     */
    document.querySelector("#menu-btn").addEventListener("click", (event) => {
-       let ul = document.querySelector("#nav-menu");
-       ul.classList.toggle("mobile-nav-menu");
-   })
+    toggleNavigationMenu();   
+   });
+
+   document.querySelector("#nav-menu>li").addEventListener("click", (event) => {
+    toggleNavigationMenu();
+   });
+
+   function toggleNavigationMenu(){
+    let ul = document.querySelector("#nav-menu");
+    ul.classList.toggle("mobile-nav-menu");
+   }
 })

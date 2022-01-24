@@ -143,7 +143,29 @@ ul.cell > li {
   color: #fff5e1;
   margin: 0;
   list-style: none;
-  padding: 0;
+  padding: 24px;
+  line-height: 64px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.mobile-nav-menu >li:nth-child(1) > a{
+  float: right;
+  padding-right: 6px;
+}
+
+.mobile-nav-menu >li:last-child {
+  display: none;
+}
+
+.mobile-nav-menu > li > a {
+  padding-left: 16px;
+}
+
+.mobile-nav-menu > li {
+  border-bottom: 1px solid #6f6c6b;
 }
 
 .mobile-nav-menu a {
