@@ -125,7 +125,7 @@ ul.cell > li {
   text-decoration: none;
 }
 
-#menu-btn {
+.menu-nav {
   min-height: 46px;
   max-width: 46px;
   padding: 9px;
@@ -293,6 +293,10 @@ ul.cell > li {
   list-style: none;
 }
 
+.menu-nav ul {
+  display: none;
+}
+
 .work:nth-child(1) ul {
   list-style: none;
   padding: 0;
@@ -428,10 +432,6 @@ ul.cell > li {
   border-radius: 100px;
 }
 
-#menu-btn ul {
-  display: none;
-}
-
 @media screen and (min-width: 992px) {
   p {
     font-size: 20px;
@@ -494,6 +494,13 @@ ul.cell > li {
     margin: 0;
     top: 50vh;
     transform: translateY(-50%);
+  }
+
+  .menu-nav > ul li {
+    display: inline-block;
+    margin: 0 16px;
+    height: 40px;
+    line-height: 40px;
   }
 
   .blk-sec ul.cell > li {
@@ -612,16 +619,16 @@ ul.cell > li {
     line-height: 44px;
   }
 
-  #menu-btn {
+  .menu-nav {
     max-width: 50%;
     padding: 0;
   }
 
-  #menu-btn > img {
+  .menu-nav > img {
     display: none;
   }
 
-  #menu-btn > ul {
+  .menu-nav > ul {
     display: block;
     padding: 0;
     margin: 0 -16px;
@@ -634,19 +641,12 @@ ul.cell > li {
     text-align: right;
   }
 
-  #menu-btn > ul li {
-    display: inline-block;
-    margin: 0 16px;
-    height: 40px;
-    line-height: 40px;
-  }
-
-  #menu-btn a {
+  .menu-nav a {
     color: inherit;
     text-decoration: inherit;
   }
 
-  #menu-btn > ul img {
+  .menu-nav > ul img {
     margin-bottom: -7px;
   }
 
