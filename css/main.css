@@ -96,10 +96,6 @@ ul.cell {
   list-style: none;
 }
 
-.mobile-nav-menu > li {
-  border-bottom: 1px solid #6f6c6b;
-}
-
 ul.cell > li {
   display: inline-block;
 }
@@ -135,45 +131,11 @@ ul.cell > li {
   padding: 9px;
 }
 
-.mobile-nav-menu {
-  display: flex !important;
-  background-color: #3c3a39;
-  flex-direction: column;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  left: 0;
-  top: 0;
-  color: #fff5e1;
-  margin: 0;
-  list-style: none;
-  padding: 24px;
-  line-height: 64px;
-  font-family: Inter, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 32px;
-}
-
-.mobile-nav-menu a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-.mobile-nav-menu > li > a {
-  padding-left: 16px;
-}
-
 .menu-nav > ul li {
   display: inline-block;
   margin: 0 16px;
   height: 40px;
   line-height: 40px;
-}
-
-.mobile-nav-menu > li:nth-child(1) > a {
-  float: right;
-  padding-right: 6px;
 }
 
 .work ul li {
@@ -209,10 +171,6 @@ ul.cell > li {
   font-weight: bold;
   font-size: 32px;
   line-height: 44px;
-}
-
-.mobile-nav-menu > li:last-child {
-  display: none;
 }
 
 .blk-sec {
@@ -479,6 +437,50 @@ ul.cell > li {
 
 .about > ul > li:nth-child(3)::before {
   border-radius: 100px;
+}
+
+@media screen and (max-width: 991px) {
+  .mobile-nav-menu {
+    display: flex !important;
+    background-color: #3c3a39;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    color: #fff5e1;
+    margin: 0;
+    list-style: none;
+    padding: 24px;
+    line-height: 64px;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+  }
+
+  .mobile-nav-menu > li {
+    border-bottom: 1px solid #6f6c6b;
+  }
+
+  .mobile-nav-menu > li:last-child {
+    display: none;
+  }
+
+  .mobile-nav-menu a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  .mobile-nav-menu > li > a {
+    padding-left: 16px;
+  }
+
+  .mobile-nav-menu > li:nth-child(1) > a {
+    float: right;
+    padding-right: 6px;
+  }
 }
 
 @media screen and (min-width: 992px) {
