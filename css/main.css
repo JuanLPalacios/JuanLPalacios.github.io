@@ -2,6 +2,26 @@
   box-sizing: border-box;
 }
 
+.modal {
+  margin-left: 16px;
+  width: calc(100vw - 32px);
+  background: #fff;
+  padding: 16px;
+}
+
+.modal > img {
+  width: 100%;
+}
+
+div#details {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background: #727272aa;
+  backdrop-filter: blur(5px);
+}
+
 body {
   margin: 0;
 }
@@ -43,6 +63,7 @@ p {
   margin-block: 12px;
 }
 
+.btn,
 button {
   font-family: Inter, sans-serif;
   font-style: normal;
@@ -59,12 +80,14 @@ button {
   transition: background-color 0.2s;
 }
 
+.btn:hover,
 button:hover,
 button.hover {
   background: #fff5e1;
   color: #f55800;
 }
 
+.btn:active,
 button:active,
 button.pressed {
   background: #e05304;
@@ -72,6 +95,7 @@ button.pressed {
   color: #f4f1f0;
 }
 
+.btn.disabled,
 button[disabled],
 button.disabled {
   background: #f4f1f0;
@@ -138,6 +162,7 @@ ul.cell > li {
   line-height: 40px;
 }
 
+.modal ul li,
 .work ul li {
   display: inline-block;
   padding: 10px 12px;
@@ -262,6 +287,7 @@ ul.cell > li {
   margin-top: -10%;
 }
 
+.modal ul,
 .work ul {
   list-style: none;
   padding: 0;
@@ -323,12 +349,14 @@ ul.cell > li {
   display: none;
 }
 
+.modal ul,
 .work:nth-child(1) ul {
   list-style: none;
   padding: 0;
   margin: 12px -6px;
 }
 
+.modal ul li,
 .work:nth-child(1) ul li {
   border: 1px solid #8993a4;
   background: initial;
