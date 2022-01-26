@@ -653,6 +653,16 @@ ul.cell > li {
 
   .modal .content {
     display: flex;
+    max-height: none;
+    grid-column-end: span 2;
+  }
+
+  .text {
+    margin-top: -12px;
+  }
+
+  .actions {
+    display: block;
   }
 
   .card.work:nth-child(1) button {
@@ -770,6 +780,8 @@ ul.cell > li {
 
   .modal > img {
     grid-column-start: 1;
+    height: 100%;
+    object-fit: cover;
   }
 
   .menu-nav > ul img {
@@ -787,6 +799,8 @@ ul.cell > li {
     width: 80%;
     display: grid;
     grid-template-columns: auto 40% 69px;
+    column-gap: 25px;
+    padding: 24px 24px 27px 24px;
   }
 
   #close-modal {
