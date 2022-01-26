@@ -7,11 +7,7 @@
   background: #fff;
   padding: 16px;
   padding-bottom: 20px;
-  height: 100%;
-}
-
-.modal > img {
-  width: 100%;
+  max-height: calc(100vh - 60px);
 }
 
 div#details {
@@ -85,6 +81,12 @@ button {
   display: inline-block;
 }
 
+button > img,
+.btn > img {
+  transform: translateY(4px);
+  height: 20px;
+}
+
 .btn:hover,
 button:hover,
 button.hover {
@@ -106,6 +108,10 @@ button.disabled {
   background: #f4f1f0;
   border-color: #f4f1f0;
   color: #5b5957;
+}
+
+.modal > img {
+  width: 100%;
 }
 
 .row {
@@ -275,9 +281,9 @@ ul.cell > li {
   justify-content: center;
 }
 
-.content {
+.modal .content {
   display: flex;
-  max-height: 40%;
+  max-height: 31vh;
   flex-direction: column;
 }
 
@@ -285,6 +291,11 @@ ul.cell > li {
   overflow-y: scroll;
   margin-top: 24px;
   margin-bottom: 16px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
 }
 
 .card.work .content {
@@ -640,6 +651,10 @@ ul.cell > li {
     display: initial;
   }
 
+  .modal .content {
+    display: flex;
+  }
+
   .card.work:nth-child(1) button {
     margin-top: 0;
     display: initial;
@@ -753,6 +768,10 @@ ul.cell > li {
     text-align: right;
   }
 
+  .modal > img {
+    grid-column-start: 1;
+  }
+
   .menu-nav > ul img {
     margin-bottom: -7px;
   }
@@ -762,6 +781,20 @@ ul.cell > li {
     min-height: 72px;
     padding: 16px 10%;
     line-height: 40px;
+  }
+
+  .modal {
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto 40% 69px;
+  }
+
+  #close-modal {
+    grid-column-start: 3;
+  }
+
+  .details-heder {
+    grid-row-start: 1;
   }
 
   .title {
