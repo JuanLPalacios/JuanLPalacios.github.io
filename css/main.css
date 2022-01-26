@@ -3,10 +3,11 @@
 }
 
 .modal {
-  margin-left: 16px;
   width: calc(100vw - 32px);
   background: #fff;
   padding: 16px;
+  padding-bottom: 20px;
+  height: 100%;
 }
 
 .modal > img {
@@ -20,6 +21,9 @@ div#details {
   z-index: 20;
   background: #727272aa;
   backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
@@ -78,6 +82,7 @@ button {
   padding: 12px;
   border: 1px solid #f55800;
   transition: background-color 0.2s;
+  display: inline-block;
 }
 
 .btn:hover,
@@ -268,6 +273,18 @@ ul.cell > li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.content {
+  display: flex;
+  max-height: 40%;
+  flex-direction: column;
+}
+
+.text {
+  overflow-y: scroll;
+  margin-top: 24px;
+  margin-bottom: 16px;
 }
 
 .card.work .content {
@@ -465,6 +482,13 @@ ul.cell > li {
 
 .about > ul > li:nth-child(3)::before {
   border-radius: 100px;
+}
+
+#close-modal {
+  width: 12px;
+  height: 12px;
+  float: right;
+  padding: 32px;
 }
 
 @media screen and (max-width: 991px) {
