@@ -249,9 +249,10 @@
                 </h2>
                 <form action="https://formspree.io/f/xlezgrpw" method="post" id="comment">
                     <input type="text" name="name" placeholder="Full name" maxlength="30" required>
-                    <input type="email" name="email" placeholder="Email address" required>
+                    <input type="email" name="email" placeholder="Email address"  aria-errormessage="error-message" required>
                     <textarea name="message" placeholder="Enter text here" maxlength="500" required></textarea>
                     <button type="submit">Get in touch</button>
+                    <small id="error-message"></small>
                 </form>
             </div>
             <hr class="footer-separator">

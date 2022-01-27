@@ -34,13 +34,18 @@ h2 {
   margin-block: 12px;
 }
 
-p {
+p,
+small {
   font-family: Poppins, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   margin-block: 12px;
+}
+
+small#error-message {
+  color: #c30000;
 }
 
 button {
@@ -484,7 +489,8 @@ ul.cell > li {
 }
 
 @media screen and (min-width: 992px) {
-  p {
+  p,
+  small {
     font-size: 20px;
     line-height: 32px;
   }
