@@ -22,4 +22,12 @@ window.addEventListener('load', () => {
   document.querySelector('#nav-menu').addEventListener('click', () => {
     toggleNavigationMenu();
   });
+
+  const form = document.getElementById('comment');
+
+  form.addEventListener('submit', (event) => {
+    if (form["email"].value != form["email"].value.toLowerCase()) {
+      event.preventDefault();
+    }
+  });
 });
