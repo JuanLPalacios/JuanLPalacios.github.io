@@ -152,4 +152,13 @@ window.addEventListener('load', () => {
   document.querySelector('#nav-menu').addEventListener('click', () => {
     toggleNavigationMenu();
   });
+
+  const form = document.getElementById('comment');
+
+  form.addEventListener('submit', (event) => {
+    if (form.email.value !== form.email.value.toLowerCase()) {
+      document.getElementById('error-message').innerText = 'The email Should be on lower case';
+      event.preventDefault();
+    } else document.getElementById('error-message').innerText = '';
+  });
 });
