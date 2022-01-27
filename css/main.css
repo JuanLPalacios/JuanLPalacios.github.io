@@ -17,9 +17,13 @@ div#details {
   z-index: 20;
   background: #727272aa;
   backdrop-filter: blur(5px);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
+}
+
+div#details.active {
+  display: flex;
 }
 
 body {
@@ -79,6 +83,7 @@ button {
   border: 1px solid #f55800;
   transition: background-color 0.2s;
   display: inline-block;
+  text-decoration: none;
 }
 
 button > img,
@@ -653,7 +658,7 @@ ul.cell > li {
 
   .modal .content {
     display: flex;
-    max-height: none;
+    max-height: calc(100vh - 277px);
     grid-column-end: span 2;
   }
 
@@ -809,6 +814,14 @@ ul.cell > li {
 
   .details-heder {
     grid-row-start: 1;
+    grid-column-end: span 2;
+  }
+
+  .details-heder h1 {
+    max-width: calc(80vw - 142px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .title {
