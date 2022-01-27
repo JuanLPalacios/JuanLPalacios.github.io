@@ -2,6 +2,30 @@
   box-sizing: border-box;
 }
 
+.modal {
+  width: calc(100vw - 32px);
+  background: #fff;
+  padding: 16px;
+  padding-bottom: 20px;
+  max-height: calc(100vh - 60px);
+}
+
+div#details {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background: #727272aa;
+  backdrop-filter: blur(5px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+div#details.active {
+  display: flex;
+}
+
 body {
   margin: 0;
 }
@@ -48,6 +72,7 @@ small#error-message {
   color: #c30000;
 }
 
+.btn,
 button {
   font-family: Inter, sans-serif;
   font-style: normal;
@@ -62,14 +87,24 @@ button {
   padding: 12px;
   border: 1px solid #f55800;
   transition: background-color 0.2s;
+  display: inline-block;
+  text-decoration: none;
 }
 
+button > img,
+.btn > img {
+  transform: translateY(4px);
+  height: 20px;
+}
+
+.btn:hover,
 button:hover,
 button.hover {
   background: #fff5e1;
   color: #f55800;
 }
 
+.btn:active,
 button:active,
 button.pressed {
   background: #e05304;
@@ -77,11 +112,16 @@ button.pressed {
   color: #f4f1f0;
 }
 
+.btn.disabled,
 button[disabled],
 button.disabled {
   background: #f4f1f0;
   border-color: #f4f1f0;
   color: #5b5957;
+}
+
+.modal > img {
+  width: 100%;
 }
 
 .row {
@@ -143,6 +183,7 @@ ul.cell > li {
   line-height: 40px;
 }
 
+.modal ul li,
 .work ul li {
   display: inline-block;
   padding: 10px 12px;
@@ -250,6 +291,23 @@ ul.cell > li {
   justify-content: center;
 }
 
+.modal .content {
+  display: flex;
+  max-height: 31vh;
+  flex-direction: column;
+}
+
+.text {
+  overflow-y: scroll;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
 .card.work .content {
   background-image: linear-gradient(0deg, black, transparent);
   padding: 72px 16px 22px;
@@ -267,6 +325,7 @@ ul.cell > li {
   margin-top: -10%;
 }
 
+.modal ul,
 .work ul {
   list-style: none;
   padding: 0;
@@ -328,12 +387,14 @@ ul.cell > li {
   display: none;
 }
 
+.modal ul,
 .work:nth-child(1) ul {
   list-style: none;
   padding: 0;
   margin: 12px -6px;
 }
 
+.modal ul li,
 .work:nth-child(1) ul li {
   border: 1px solid #8993a4;
   background: initial;
@@ -442,6 +503,13 @@ ul.cell > li {
 
 .about > ul > li:nth-child(3)::before {
   border-radius: 100px;
+}
+
+#close-modal {
+  width: 12px;
+  height: 12px;
+  float: right;
+  padding: 32px;
 }
 
 @media screen and (max-width: 991px) {
@@ -594,6 +662,20 @@ ul.cell > li {
     display: initial;
   }
 
+  .modal .content {
+    display: flex;
+    max-height: calc(100vh - 277px);
+    grid-column-end: span 2;
+  }
+
+  .text {
+    margin-top: -12px;
+  }
+
+  .actions {
+    display: block;
+  }
+
   .card.work:nth-child(1) button {
     margin-top: 0;
     display: initial;
@@ -707,6 +789,12 @@ ul.cell > li {
     text-align: right;
   }
 
+  .modal > img {
+    grid-column-start: 1;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .menu-nav > ul img {
     margin-bottom: -7px;
   }
@@ -716,6 +804,30 @@ ul.cell > li {
     min-height: 72px;
     padding: 16px 10%;
     line-height: 40px;
+  }
+
+  .modal {
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto 40% 69px;
+    column-gap: 25px;
+    padding: 24px 24px 27px 24px;
+  }
+
+  #close-modal {
+    grid-column-start: 3;
+  }
+
+  .details-heder {
+    grid-row-start: 1;
+    grid-column-end: span 2;
+  }
+
+  .details-heder h1 {
+    max-width: calc(80vw - 142px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .title {
