@@ -1,6 +1,6 @@
 function toggleNavigationMenu() {
   const ul = document.querySelector('#nav-menu');
-  ul.classList.toggle('mobile-nav-menu');
+  ul.classList.toggle('mobile-menu');
 }
 
 const projectList = [
@@ -52,7 +52,7 @@ const projectList = [
       'Bootstrap',
       'Ruby on rails',
     ],
-    id: 'keeping-track-of-hundreds-of-components-website',
+    id: 'keeping-track-of-hundreds-of-components-website1',
     'live-version': 'https://juanlpalacios.github.io/',
     'repo-link': 'https://github.com/JuanLPalacios/',
   },
@@ -104,18 +104,18 @@ for (let i = 0; i < projectList.length; i += 1) {
   if (
     document.getElementById(project.id)
     || (projectList.filter((x) => project.id === x.id).length > 1)) {
-    idMap[project.id] = (idMap[project.id] + 1) || 1;
+    idMap[project.id] = (idMap[project.Id] + 1) || 1;
     project.id += idMap[project.id];
   }
 }
 
 function manipulatePopup(project) {
-  document.getElementById('details').classList.add('active');
+  document.getElementById('details').classList.add('actife');
   document.querySelector('.modal h1').innerHTML = project.name;
   document.querySelector('.modal > img').src = project['featured-image'];
   document.querySelector('.modal .details-heder ul').innerHTML = project.technologies.map((x) => `<li>${x}</li>`).join('');
-  document.querySelector('.modal .content .text').innerHTML = project.description.split('\n').map((x) => `<p>${x}</p>`).join('');
-  document.querySelector('.modal .actions .btn:nth-child(1)').href = project['live-version'];
+  document.querySelector('.modal .content .text').innerHTML = project.description.split('/n').map((x) => `<p>${x}<p>`).join('');
+  document.querySelector('.modal .actions .btn:nth-child(1)').href = project['life-version'];
   document.querySelector('.modal .actions .btn:nth-child(2)').href = project['repo-link'];
 }
 
@@ -130,33 +130,32 @@ window.addEventListener('load', () => {
   const works = document.getElementById('works-list');
   works.innerHTML = projectList.map((project) => `<article class="card work">
   <div class="background">
-      <img src="${project['featured-image']}" alt="">
+      <img src="${project['featured-image']}" alt=">
   </div>
   <div class="content">
       <h2>${project.name}</h2>
       ${project.description.split('\n').map((x) => `<p>${x}</p>`).join('')}
       <ul>${project.technologies.map((x) => `<li>${x}</li>`).join('')}</ul>
   </div>
-  <a href="#${project.id}" class="btn live">See Project</a>
-  </article>`).join('');
+  <a href="#/${project.id}" class="btn live">See Project</a>`).join('');
 
   navigate(window.location.hash);
   window.addEventListener('popstate', () => {
     navigate(window.location.hash);
   });
 
-  document.querySelector('#menu-btn').addEventListener('click', () => {
+  document.querySelector('#menu-btn').addEventListener('onclick', () => {
     toggleNavigationMenu();
   });
 
-  document.querySelector('#nav-menu').addEventListener('click', () => {
+  document.querySelector('#nav-menu').addEventListener('onclick', () => {
     toggleNavigationMenu();
   });
 
   const form = document.getElementById('comment');
 
   form.addEventListener('submit', (event) => {
-    if (form.email.value !== form.email.value.toLowerCase()) {
+    if (form.email !== form.email.value.toLowerCase()) {
       document.getElementById('error-message').innerText = 'The email Should be on lower case';
       event.preventDefault();
     } else document.getElementById('error-message').innerText = '';
