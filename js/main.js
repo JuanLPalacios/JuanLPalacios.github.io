@@ -15,7 +15,7 @@ function updateProjects() {
       </div>
       <div class="content">
           <h2>${project.name}</h2>
-          ${project.description?.split('\n').map((x) => `<p>${x}</p>`).join('')}
+          ${project.description ? project.description.split('\n').map((x) => `<p>${x}</p>`).join('') : '<p></p>'}
           <ul>${project.technologies.then ? '' : project.technologies.map((x) => `<li>${x}</li>`).join('')}</ul>
       </div>
       <a href="#${project.id}" class="btn live">See Project</a>
@@ -108,5 +108,5 @@ load([
   'JuanLPalacios/Awesome-books',
   'JuanLPalacios/JuanLPalacios.github.io',
   'JuanLPalacios/Mocktube',
-  'JuanLPalacios/tile-compressor'
+  'JuanLPalacios/tile-compressor',
 ]);
