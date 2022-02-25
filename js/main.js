@@ -1,3 +1,5 @@
+import pinned from './pinned.js';
+
 const projectList = [];
 
 function toggleNavigationMenu() {
@@ -101,12 +103,4 @@ async function load(pins) {
   if (ready) updateProjects();
 }
 
-load([
-  'JuanLPalacios/capstone-project-1',
-  'JuanLPalacios/todo-list',
-  'JuanLPalacios/Awesome-books-with-ES6',
-  'JuanLPalacios/Awesome-books',
-  'JuanLPalacios/JuanLPalacios.github.io',
-  'JuanLPalacios/Mocktube',
-  'JuanLPalacios/tile-compressor',
-]);
+load(pinned);
