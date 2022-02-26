@@ -688,6 +688,7 @@ ul.cell > li {
 
   .card.work .content {
     padding-top: 178px;
+    min-height: calc(100% - 50px);
   }
 
   .card.work:hover .content {
