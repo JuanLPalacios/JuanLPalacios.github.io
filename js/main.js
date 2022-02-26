@@ -1,6 +1,11 @@
 import pinned from './pinned.js';
+import snapshot from './snapshot.js';
+import topics from './topics.js';
 
-const projectList = [];
+const LAST_UPDATE_TIMESTAMP_KEY = 'last-update';
+const PROJECT_LIST = 'projects';
+
+let projectList = snapshot;
 
 function toggleNavigationMenu() {
   const ul = document.querySelector('#nav-menu');
@@ -9,20 +14,17 @@ function toggleNavigationMenu() {
 
 function updateProjects() {
   const works = document.getElementById('works-list');
-  works.innerHTML = projectList.map((project) => {
-    if (project.technologies.then) project.technologies.then(() => { updateProjects(); });
-    return `<article class="card work">
+  works.innerHTML = projectList.map((project) => `<article class="card work">
       <div class="background">
           <img src="${project['featured-image']}" alt="">
       </div>
       <div class="content">
           <h2>${project.name}</h2>
           ${project.description ? project.description.split('\n').map((x) => `<p>${x}</p>`).join('') : '<p></p>'}
-          <ul>${project.technologies.then ? '' : project.technologies.map((x) => `<li>${x}</li>`).join('')}</ul>
+          <ul>${project.technologies.map((x) => `<li>${x}</li>`).join('')}</ul>
       </div>
       <a href="#${project.id}" class="btn live">See Project</a>
-    </article>`;
-  }).join('');
+    </article>`).join('');
 }
 
 function manipulatePopup(project) {
@@ -69,26 +71,30 @@ async function load(pins) {
       } else document.getElementById('error-message').innerText = '';
     });
   });
-  const promises = pins.map(
-    (pin) => fetch(`https://api.github.com/repos/${pin}`)
-      .then((response) => response.json())
-      .then((repo) => {
-        repo.technologies = fetch(repo.languages_url)
-          .then((response) => response.json())
-          .then((langs) => {
-            repo.technologies = Object.keys(langs);
-            updateProjects();
-          });
-        repo['featured-image'] = `https://raw.githubusercontent.com/${repo.full_name}/main/screenshot.png`;
-        repo['live-version'] = `https://${repo.owner.login}.github.io/${repo.name}`;
-        repo['repo-link'] = repo.html_url;
-        repo.id = repo.name;
-        repo.name = repo.name.replace(/-/g, ' ');
-        return repo;
-      }),
-  );
-  const repos = await Promise.all(promises);
-  projectList.push(...repos.sort((a, b) => a.stargazers_count - b.stargazers_count));
+  if (localStorage.getItem(LAST_UPDATE_TIMESTAMP_KEY)
+  && ((new Date(localStorage.getItem(LAST_UPDATE_TIMESTAMP_KEY)) - Date.now()) < 0)) {
+    const promises = pins.map(
+      (pin) => fetch(`https://api.github.com/repos/${pin}`)
+        .then((response) => response.json())
+        .then((repo) => {
+          repo.technologies = repo.topics.map((topic) => topics[topic] || topic);
+          repo['featured-image'] = `https://raw.githubusercontent.com/${repo.full_name}/main/screenshot.png`;
+          repo['live-version'] = `https://${repo.owner.login}.github.io/${repo.name}`;
+          repo['repo-link'] = repo.html_url;
+          repo.id = repo.name;
+          repo.name = repo.name.replace(/-/g, ' ');
+          return repo;
+        }),
+    );
+    const repos = await Promise.all(promises);
+    projectList = repos;
+    localStorage.setItem(PROJECT_LIST, JSON.stringify(projectList));
+    localStorage.setItem(LAST_UPDATE_TIMESTAMP_KEY,
+      new Date(new Date().setHours(new Date().getHours() + 6)).toISOString());
+  } else {
+    projectList = JSON.parse(localStorage.getItem(PROJECT_LIST)) || projectList;
+  }
+  projectList.sort((a, b) => a.stargazers_count - b.stargazers_count);
   const idMap = {};
 
   for (let i = 0; i < projectList.length; i += 1) {
