@@ -4,7 +4,7 @@
 
 > a place to show all my portafolio information.
 
-![screenshot](./screenshot.jpg)
+![screenshot](./screenshot.png)
 
 portafolio includin previous proyects personal and profecional.
 

@@ -4,7 +4,6 @@ import fetch from 'node-fetch';
 import pinned from './js/pinned.js';
 import topics from './js/topics.js';
 
-console.log(JSON.stringify([1, 2, 3]));
 const promises = pinned.map(
   (pin) => fetch(`https://api.github.com/repos/${pin}`)
     .then((response) => response.json())
