@@ -2,9 +2,11 @@
   "name": "juanlpalacios.github.io",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "capture.js",
+  "type": "module",
   "scripts": {
-    "test": "npx hint . && npx stylelint \"**/*.{css,scss}\" && exit 1"
+    "test": "npx hint . && npx stylelint \"**/*.{css,scss}\" && npx eslint .",
+    "capture": "node . && npx eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.25.4",
     "hint": "^6.1.9",
+    "node-fetch": "^3.2.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
