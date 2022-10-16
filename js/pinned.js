@@ -2,9 +2,9 @@ const pinned = [
   'JuanLPalacios/capstone-project-1',
   'JuanLPalacios/todo-list',
   'JuanLPalacios/Awesome-books-with-ES6',
-  'JuanLPalacios/Awesome-books',
+  'JuanLPalacios/Help-blog',
   'JuanLPalacios/JuanLPalacios.github.io',
-  'JuanLPalacios/Mocktube',
-  'JuanLPalacios/tile-compressor',
+  'JuanLPalacios/The-Botom-App',
+  'JuanLPalacios/apprun-leaflet',
 ];
 export default pinned;
