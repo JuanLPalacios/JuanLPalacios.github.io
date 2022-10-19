@@ -74,6 +74,7 @@ small#error-message {
 
 .btn,
 button {
+  display: inline-block;
   font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -87,7 +88,6 @@ button {
   padding: 12px;
   border: 1px solid #f55800;
   transition: background-color 0.2s;
-  display: inline-block;
   text-decoration: none;
 }
 
@@ -274,6 +274,7 @@ ul.cell > li {
 }
 
 .card.work {
+  flex: 0 0 calc(33.3% - 16px);
   position: relative;
   display: flex;
   flex-flow: column;
@@ -471,7 +472,7 @@ ul.cell > li {
   text-align: center;
 }
 
-.about .bg-ilust button {
+.about .bg-ilust .btn {
   display: none;
 }
 
@@ -657,9 +658,9 @@ ul.cell > li {
     z-index: 1;
   }
 
-  .about .bg-ilust button {
+  .about .bg-ilust .btn {
     margin-top: 48px;
-    display: initial;
+    display: inline-block;
   }
 
   .modal .content {
@@ -706,11 +707,13 @@ ul.cell > li {
   }
 
   .grid.works-list {
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     margin: 90px 0 106px;
   }
 
   .card.work:nth-child(1) {
+    flex-basis: 100%;
     grid-column: span 3;
     display: grid;
     grid-template-columns: 60% 40%;
