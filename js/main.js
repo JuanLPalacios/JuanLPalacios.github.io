@@ -1,6 +1,6 @@
 import pinned from './pinned.js';
 import snapshot from './snapshot.js';
-import topics from './topics.js';
+import { mapInfo } from './utils.js';
 
 const LAST_UPDATE_TIMESTAMP_KEY = 'last-update';
 const PROJECT_LIST = 'projects';
@@ -73,19 +73,7 @@ async function load(pins) {
   });
   if (localStorage.getItem(LAST_UPDATE_TIMESTAMP_KEY)
   && ((new Date(localStorage.getItem(LAST_UPDATE_TIMESTAMP_KEY)) - Date.now()) < 0)) {
-    const promises = pins.map(
-      (pin) => fetch(`https://api.github.com/repos/${pin}`)
-        .then((response) => response.json())
-        .then((repo) => {
-          repo.technologies = repo.topics.map((topic) => topics[topic] || topic);
-          repo['featured-image'] = `https://raw.githubusercontent.com/${repo.full_name}/main/screenshot.png`;
-          repo['live-version'] = `https://${repo.owner.login}.github.io/${repo.name}`;
-          repo['repo-link'] = repo.html_url;
-          repo.id = repo.name;
-          repo.name = repo.name.replace(/-/g, ' ');
-          return repo;
-        }),
-    );
+    const promises = pins.map(mapInfo);
     const repos = await Promise.all(promises);
     projectList = repos;
     localStorage.setItem(PROJECT_LIST, JSON.stringify(projectList));
