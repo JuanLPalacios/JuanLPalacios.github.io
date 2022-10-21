@@ -28,7 +28,7 @@ export const mapInfo = (pin) => fetch(`https://api.github.com/repos/${pin}`)
     repo['live-version'] = repo.homepage || `https://${repo.owner.login}.github.io/${repo.name}`;
     repo['repo-link'] = repo.html_url;
     repo.id = repo.name;
-    repo.name = repo.name.replace(/_/g, ' ');
+    repo.name = repo.name.replace(/-/g, ' ');
     return repo;
   });
 
