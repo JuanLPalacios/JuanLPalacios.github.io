@@ -4,7 +4,7 @@ const pinned = [
   'JuanLPalacios/todo-list',
   'JuanLPalacios/Awesome-books-with-ES6',
   'JuanLPalacios/Recipe-app',
-  'JuanLPalacios/JuanLPalacios.github.io',
+  'JuanLPalacios/metrics-webapp',
   'JuanLPalacios/The-Botom-App',
 ];
 export default pinned;
