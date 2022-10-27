@@ -82,7 +82,7 @@ async function load(pins) {
   } else {
     projectList = JSON.parse(localStorage.getItem(PROJECT_LIST)) || projectList;
   }
-  projectList.sort((a, b) => a.stargazers_count - b.stargazers_count);
+  // projectList.sort((a, b) => b.stargazers_count - a.stargazers_count);
   const idMap = {};
 
   for (let i = 0; i < projectList.length; i += 1) {
