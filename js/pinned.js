@@ -1,6 +1,6 @@
 const pinned = [
+  'JuanLPalacios/Scribles',
   'JuanLPalacios/apprun-leaflet',
-  'JuanLPalacios/capstone-project-1',
   'JuanLPalacios/todo-list',
   'JuanLPalacios/Awesome-books-with-ES6',
   'JuanLPalacios/Recipe-app',
